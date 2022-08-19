@@ -1,0 +1,96 @@
+body {
+    font-family: system-ui;
+    background-image: url(001-subtle-light-pattern.jpg);
+}
+
+.tabs {
+    margin-top: 50px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 700px;
+    margin: 0 auto;
+}
+
+/* each tab*/
+.tab_item {
+    width: calc(100%/2);
+    height: 50px;
+    border-bottom: 3px solid #5ab4bd;
+    background-color: #d9d9d9;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #565656;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.tab_item:hover {
+    opacity: 0.75;
+}
+
+/*delete radio button in the tub*/
+input[name="tab_item"] {
+    display: none;
+}
+
+.tab_content {
+    display: none;
+    padding: 0px 40px 0;
+    clear: both;
+    overflow: hidden;
+}
+
+.tab_common_content {
+    padding: 0px 40px 0;
+}
+
+/*only show the content of the selected tag*/
+#metric:checked~#metric_content,
+#imperial:checked~#imperial_content,
+#design:checked~#design_content {
+    display: block;
+}
+
+/*change style when the tag is selected*/
+.tabs input:checked+.tab_item {
+    background-color: #5ab4bd;
+    color: #fff;
+}
+
+label,
+.tab_common_content>p {
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+}
+
+.tab_common_content>label {
+    padding-right: 10px;
+}
+
+input[type=number] {
+    width: 5em;
+}
+
+#message {
+    color: red;
+}
+
+.submit {
+    text-align: center;
+}
+
+.submit>input[type=submit] {
+    padding: 5px;
+    background-color: PaleTurquoise;
+    text-decoration: none;
+    border-radius: 7px;
+    box-shadow: 2px 2px gray;
+    cursor: pointer;
+    margin-top: 15px;
+}

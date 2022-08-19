@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>BMR Calculator</title>
+</head>
+
+<body>
+    <div class="tabs">
+        <input id="metric" type="radio" name="tab_item" checked>
+        <label class="tab_item" for="metric">Metric BMR Calculator</label>
+        <input id="imperial" type="radio" name="tab_item">
+        <label class="tab_item" for="imperial">Imperial BMR Calculator</label>
+        <div class="tab_content" id="metric_content">
+            <p class="c-txtsp"><b>Metric BMR Calculator</b></p>
+        </div>
+        <div class="tab_content" id="imperial_content">
+            <p class="c-txtsp"><b>Imperial BMR Calculator</b></p>
+        </div>
+        <div class="tab_common_content">
+            <form>
+                <div id="message"></div><br>
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <br>
+                <label for="age">Age</label>
+                <input type="text" name="age" id="age" size="5" required>
+                <br>
+                <p><u>Your Height</u></p>
+                <br>
+                <label for="feet">Feet</label>
+                <input type="number" name="feet" id="feet" value="0" min="0" required>
+                <label for="inches">Inches</label>
+                <input type="number" name="inches" id="inches" value="0" min="0">
+                <br>
+                <p><u>Your Weight</u></p>
+                <br>
+                <label for="pounds">Pounds</label>
+                <input type="number" name="pounds" id="pounds" value="0" min="0" required>
+                <label for="stones">Stones</label>
+                <input type="number" name="stones" id="stones" value="0" min="0">
+                <br>
+                <p><u>Activity level</u></p>
+                <input type="radio" name="activity_level" id="sedentary" checked required>I am sedentary (little or
+                no exercise)
+                <br>
+                <input type="radio" name="activity_level" id="lightly_active">I am lightly active (light exercise or
+                sports
+                1-3 days per week) <br>
+                <input type="radio" name="activity_level" id="moderately_active">I am moderately active (moderate
+                exercise
+                or sports 3-5 days per week)
+                <br>
+                <input type="radio" name="activity_level" id="very_active">I am very active (hard exercise or sports 6-7
+                days per week) <br>
+                <input type="radio" name="activity_level" id="super_active">I am super active (very hard exercise or
+                sports
+                and a physical job or 2x
+                training) <br>
+                <div class="submit">
+                    <input type="submit" value="Calculate" onclick="clickCalculateButton()">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
